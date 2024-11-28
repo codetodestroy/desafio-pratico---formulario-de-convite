@@ -1,0 +1,24 @@
+aside {
+    & header {
+        margin: 32px;
+
+        & img {
+            width: 45.85px;
+            height: 48px;
+            margin-bottom: 16px;
+        }
+        
+        & h1 {
+            font: var(--logo);
+            color: var(--pink);
+            margin-bottom: 4px;
+        }
+    
+        & p {
+            font: var(--body-md);
+            color: var(--text-heading);
+            font-weight: 300;
+        }
+    }
+    
+}
