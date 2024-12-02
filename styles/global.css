@@ -62,3 +62,8 @@ img {
     display: block;
     max-width: 100%;
 }
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}

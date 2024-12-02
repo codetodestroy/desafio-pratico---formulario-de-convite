@@ -1,0 +1,44 @@
+@import url(inputs/index.css);
+
+fieldset {
+    all: unset;
+    width: 100%;
+}
+
+legend {
+    margin-bottom: 1.5rem;
+
+    & h3 {
+        font: var(--heading-sm);
+        color: var(--text-heading);
+
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        &::before {
+            content: '';
+            display: block;
+            background: no-repeat 100%/contain;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+label {
+    font: var(--body-sm);
+    font-weight: 400;
+    color: var(--text-body);
+}
+
+input {
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    padding: .8125rem 1rem;
+}
+
+.about-event h3::before {
+    background-image: url(../assets/icons/calendar.svg);
+}
