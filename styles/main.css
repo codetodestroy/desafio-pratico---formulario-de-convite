@@ -1,8 +1,4 @@
 .main-container {
-    & header {
-        margin-bottom: 2.5rem;
-    }
-    
     & h2 {
         font: var(--heading-md);
         color: var(--text-heading);

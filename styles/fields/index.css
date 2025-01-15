@@ -1,0 +1,24 @@
+@import url(input.css);
+@import url(radio.css);
+@import url(textarea.css);
+@import url(checkbox.css);
+
+fieldset + fieldset {
+    margin-top: 3.15rem;
+}
+
+.about-event .flex {
+    gap: 1rem;
+}
+
+.checkbox-wrapper .flex {
+    justify-content: space-between;
+}
+
+.about-event span::before {
+    background: url(../../assets/icons/calendar.svg) no-repeat 100%/contain;
+}
+
+.customization span::before {
+    background: url(../../assets/icons/paintbrush-vertical.svg) no-repeat 100%/contain;
+}

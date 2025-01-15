@@ -1,0 +1,50 @@
+.btn-radio {
+    padding: 0.25rem;
+
+    display: flex;
+    gap: 0.25rem;
+}
+
+.radio-inner {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    cursor: pointer;
+
+    position: relative;
+
+    & input,
+    & input:focus,
+    & input:hover {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & label {
+        margin-bottom: 0rem;
+
+        font: var(--body-sm);
+        font-weight: 400;
+    }
+
+    &:has(:checked) {
+        background-color: var(--shape-hover);
+        border-radius: 0.25rem;
+        color: var(--text-heading);
+
+        & svg path {
+            fill: var(--brand-light);
+        }
+        
+        & label {
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+    }
+
+}
