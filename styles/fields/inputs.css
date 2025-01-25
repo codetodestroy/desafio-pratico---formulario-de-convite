@@ -1,0 +1,35 @@
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1rem;
+
+    & input {
+        height: 3rem;
+
+        background-color: var(--input-base);
+        border: 1px solid var(--input-stroke);
+        border-radius: 0.5rem;
+        padding: 0.8125rem 1rem;
+
+        &[type="datetime-local"] {
+            text-transform: uppercase;
+
+            &::-webkit-calendar-picker-indicator {
+                display: none;
+            }
+        }
+
+        &::placeholder,
+        &[type="datetime-local"] {
+            font: var(--body-md);
+            font-weight: 400;
+            color: var(--input-placeholder);
+        }
+
+        &:focus {
+            border-color: transparent;
+            outline: 1px solid var(--brand-light);
+        }
+    }
+}

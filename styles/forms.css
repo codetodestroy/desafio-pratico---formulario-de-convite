@@ -1,32 +1,47 @@
-@import url(fields/index.css);
-
-form {
-    margin-top: 2.5rem;
-}
+@import url(fields/inputs.css);
+@import url(fields/radio.css);
+@import url(fields/textarea.css);
+@import url(fields/checkbox.css);
+@import url(fields/droparea.css);
 
 fieldset {
-    border: none;
+    border: 0;
 
-    display: grid;
-    gap: 1rem;
+    margin-top: 2.5rem;
+
+    & > .flex {
+        gap: 1rem;
+    }
 }
 
 legend {
+    display: flex;
+    gap: .75rem;
+
     margin-bottom: 1.5rem;
 
-    & span {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-
-        font: var(--heading-sm);
-        color: var(--text-heading);
-
-        &::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-        }
+    &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        display: block;
     }
+
+    & span {
+        font: var(--heading-sm);
+    }
+}
+
+label {
+    font: var(--body-sm);
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+
+.about-event legend::before {
+    background: url(../assets/icons/calendar.svg) no-repeat 100%/contain;
+}
+
+.customization legend::before {
+    background: url(../assets/icons/paintbrush-vertical.svg) no-repeat 100%/contain;
 }

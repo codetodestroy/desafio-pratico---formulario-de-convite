@@ -1,6 +1,0 @@
-.main-container {
-    & h2 {
-        font: var(--heading-md);
-        color: var(--text-heading);
-    }
-}
