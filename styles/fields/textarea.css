@@ -2,12 +2,17 @@
     display: flex;
     flex-direction: column;
 
+    margin-top: 1rem;
+
     & textarea {
         height: 8.5rem;
         background-color: var(--input-base);
         border: 1px solid var(--input-stroke);
         border-radius: 0.5rem;
         padding: 1rem;
+        font: var(--body-md);
+        color: var(--text-body);
+        font-weight: 400;
 
         &::placeholder {
             font: var(--body-md);

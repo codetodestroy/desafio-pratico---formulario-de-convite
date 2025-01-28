@@ -50,4 +50,9 @@
     &:hover {
         background-color: var(--shape-hover);
     }
+
+    &:has(:focus-within),
+    &:focus {
+       outline: 2px solid var(--brand-light);
+    }
 }

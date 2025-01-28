@@ -148,7 +148,7 @@
 
     &:has(input:checked),
     &:focus {
-       border: 2px solid var(--brand-light);
+       outline: 2px solid var(--brand-light);
     }
 
     &:not(:has(input:checked)) {

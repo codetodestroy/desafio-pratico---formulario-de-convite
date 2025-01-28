@@ -38,10 +38,76 @@ label {
     margin-bottom: 0.75rem;
 }
 
+input, 
+textarea {
+    &:invalid {
+        border: 1px solid var(--danger);
+    }
+
+    &[required] + .error {
+        margin-top: 0.5rem;
+
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        font: var(--body-xs);
+        color: var(--danger);
+    }
+
+    &:valid + .error {
+        display: none;
+    }
+}
+
+
 .about-event legend::before {
     background: url(../assets/icons/calendar.svg) no-repeat 100%/contain;
 }
 
 .customization legend::before {
     background: url(../assets/icons/paintbrush-vertical.svg) no-repeat 100%/contain;
+}
+
+.contact-data legend::before {
+    background: url(../assets/icons/calendar.svg) no-repeat 100%/contain;
+}
+
+.terms {
+    border-top: 1px solid var(--input-stroke);
+    padding-top: 2.5rem;
+}
+
+.main-button {
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: flex-end;
+
+    & .btn-send {
+        padding: 0.81rem 1.25rem;
+        background-color: var(--brand-dark);
+        border-radius: 0.5rem;
+
+        display: flex;
+        gap: 0.75rem;
+
+        & svg {
+            display: flex;
+            justify-content: center;
+        }
+
+        & input {
+            all: unset;
+     
+            font: var(--body-md);
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        &:hover {
+            background-color: var(--brand-light);
+            cursor: pointer;
+        }
+    }
 }

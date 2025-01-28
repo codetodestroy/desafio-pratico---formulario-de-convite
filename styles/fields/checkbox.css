@@ -67,3 +67,43 @@
         outline: 1px solid var(--brand-light);
     }
 }
+
+.terms-inner {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    
+    position: relative;
+    & .checkbox {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../../assets/icons/checkbox-default.svg) no-repeat 100%/contain;
+    }
+
+    & input {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & label {
+        font: var(--body-sm);
+        font-weight: 400;
+        color: var(--text-body);
+        margin-bottom: 0rem;
+
+        & .link-terms {
+            color: var(--brand-light);
+            font-weight: 600;
+        }
+    }
+
+    & + .terms-inner {
+        margin-top: 0.75rem;
+    }
+
+    &:has(input:checked) .checkbox {
+        background: url(../../assets/icons/checkbox-checked.svg) no-repeat 100%/contain;
+    }
+}
