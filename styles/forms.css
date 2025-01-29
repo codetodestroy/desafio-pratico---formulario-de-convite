@@ -55,7 +55,8 @@ textarea {
         color: var(--danger);
     }
 
-    &:valid + .error {
+    &:valid + .error,
+    &:focus + .error {
         display: none;
     }
 }
@@ -108,6 +109,10 @@ textarea {
         &:hover {
             background-color: var(--brand-light);
             cursor: pointer;
+        }
+
+        &:has(:focus-within) {
+            border: 1px solid var(--brand-light)
         }
     }
 }

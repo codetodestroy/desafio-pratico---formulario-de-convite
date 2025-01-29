@@ -74,12 +74,14 @@
     align-items: center;
     
     position: relative;
+
     & .checkbox {
         display: inline-block;
         width: 16px;
         height: 16px;
         background: url(../../assets/icons/checkbox-default.svg) no-repeat 100%/contain;
     }
+
 
     & input {
         all: unset;
@@ -93,9 +95,16 @@
         color: var(--text-body);
         margin-bottom: 0rem;
 
+        position: relative;
         & .link-terms {
+            position: static;
+
             color: var(--brand-light);
             font-weight: 600;
+
+            &.link-terms:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -105,5 +114,9 @@
 
     &:has(input:checked) .checkbox {
         background: url(../../assets/icons/checkbox-checked.svg) no-repeat 100%/contain;
+    }
+
+    &:has(:focus-within) .checkbox {
+        background: url(../../assets/icons/checkbox-focus.svg) no-repeat 100%/contain;
     }
 }

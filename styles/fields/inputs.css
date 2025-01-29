@@ -35,10 +35,13 @@
         &:focus {
             border-color: transparent;
             outline: 1px solid var(--brand-light);
+            
+            
 
             &:has(:invalid) {
                 border-color: var(--danger);
             }
+
         }
     }
 }
